@@ -4,12 +4,10 @@ set shell := ["bash", "-cu"]
 # Install dependencies and prepare project
 install:
     rustup target add wasm32-unknown-unknown
-    npm install
 
 # Start Dioxus in development mode (ensures WASM is built)
 serve:
     just clean && just build
-    npx tailwindcss -i ./src/tailwind.css -o ./dist/output.css --watch &
     dx serve
 
 # Build the WASM app for production
@@ -17,14 +15,8 @@ build:
     just install
     cargo build --target wasm32-unknown-unknown --release
     dx build --release
-    npx tailwindcss -i ./src/tailwind.css -o ./dist/output.css --minify
     mkdir -p pkg
     cp public/index.html pkg/
-    cp dist/output.css pkg/
-
-# Watch Tailwind in development
-watch-tailwind:
-    npx tailwindcss -i ./src/tailwind.css -o ./dist/output.css --watch
 
 # Clean up generated files
 clean:
