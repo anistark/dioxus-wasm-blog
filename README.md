@@ -8,6 +8,11 @@ This is a sample project used to showcase what dioxus is capable of.
 This project is a blog application that leverages the power of WebAssembly and Rust to deliver a high-performance, interactive user experience. Dioxus provides a reactive, component-based architecture similar to popular JavaScript frameworks.
 The goal is to provide an alternate to js based frameworks (react, vue, etc) for web development.
 
+### Uses
+
+- [Dioxus](https://dioxuslabs.com/)
+- [WASM](https://webassembly.org/)
+
 ## Installation
 
 To get started with this project, follow these steps:
