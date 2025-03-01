@@ -1,0 +1,20 @@
+[package]
+name = "dioxus-wasm-blog"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+dioxus = { version = "0.6.3", features = ["web"] }
+dioxus-web = "0.6.3"
+
+[profile]
+
+[profile.wasm-dev]
+inherits = "dev"
+opt-level = 1
+
+[profile.server-dev]
+inherits = "dev"
+
+[profile.android-dev]
+inherits = "dev"
