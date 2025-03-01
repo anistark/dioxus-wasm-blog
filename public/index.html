@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dioxus Blog</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-br from-blue-900 to-gray-900 text-white flex items-center justify-center min-h-screen">
+    <script type="module">
+        import init from './pkg/dioxus_wasm_blog.js'; // Corrected path
+        init();  // Initialize the WASM module
+    </script>
+</body>
+</html>

@@ -17,25 +17,31 @@ The goal is to provide an alternate to js based frameworks (react, vue, etc) for
 
 To get started with this project, follow these steps:
 
-1. **Clone:**
+#### Clone repo
     ```sh
     git clone https://github.com/anistark/dioxus-wasm-blog.git
     cd dioxus-wasm-blog
     ```
 
-2. **Setup WebAssembly target:**
+#### Setup WebAssembly target:
     ```sh
     rustup target add wasm32-unknown-unknown
     ```
 
-3. **Build:**
+#### Build for Production
     ```sh
-    cargo build --target wasm32-unknown-unknown
+    just build
     ```
 
-4. **Serve:**
+#### Serve for Development
     ```sh
-    dx serve
+    just serve
     ```
+
+#### Clean
+
+```sh
+just clean
+```
 
 Open `http://localhost:8080` in your browser.

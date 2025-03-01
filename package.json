@@ -1,0 +1,20 @@
+{
+  "name": "dioxus-wasm-blog",
+  "version": "0.1.0",
+  "description": "Welcome to the Dioxus WASM Blog project! This project is built using Dioxus, a modern Rust framework for building fast and reliable web applications with WebAssembly. This is a sample project used to showcase what dioxus is capable of.",
+  "main": "postcss.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tailwind:build": "bunx tailwindcss -i ./src/tailwind.css -o ./dist/output.css",
+    "tailwind:watch": "bunx tailwindcss -i ./src/tailwind.css -o ./dist/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.9",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.0.9"
+  }
+}
