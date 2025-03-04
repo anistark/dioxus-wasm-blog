@@ -30,18 +30,18 @@ To get started with this project, follow these steps:
 
 #### Build for Production
     ```sh
-    just build
+    cargo build --target wasm32-unknown-unknown
+    ```
+
+    or
+
+    ```sh
+    dx build
     ```
 
 #### Serve for Development
     ```sh
-    just serve
+    dx serve
     ```
-
-#### Clean
-
-```sh
-just clean
-```
 
 Open `http://localhost:8080` in your browser.
