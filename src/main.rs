@@ -7,6 +7,10 @@ fn main() {
 #[component]
 fn App() -> Element {
     rsx! {
+        document::Stylesheet {
+            // Urls are relative to your Cargo.toml file
+            href: "/public/tailwind.css",
+        },
         div {
             class: "flex items-center justify-center min-h-screen w-full bg-gradient-to-br from-blue-900 to-gray-900",
             div {
@@ -16,7 +20,7 @@ fn App() -> Element {
                     "Welcome to My Dioxus Blog"
                 },
                 p {
-                    class: "text-lg text-gray-300 mt-4",
+                    class: "text-xl text-gray-300 mt-4",
                     "A minimal blog powered by Dioxus and TailwindCSS!"
                 },
                 button {

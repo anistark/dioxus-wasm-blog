@@ -1,8 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/**/*.{html,rs}", "./public/index.html"],
+  mode: "all",
+  content: [
+      "./src/**/*.{js,rs,html,css}",
+      "./pkg/**/*.html"
+  ],
   theme: {
-    extend: {},
+      extend: {},
   },
-  plugins: [],
-};
+  plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")],
+}
