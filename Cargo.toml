@@ -2,9 +2,10 @@
 name = "dioxus-wasm-blog"
 version = "0.1.0"
 edition = "2021"
+authors = ["Kumar Anirudha <mail@anirudha.dev>"]
 
 [dependencies]
-dioxus = { version = "0.6.3", features = ["web"] }
+dioxus = { version = "0.6.3", features = ["web", "router"] }
 dioxus-web = "0.6.3"
 
 [profile]

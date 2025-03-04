@@ -1,5 +1,23 @@
 use dioxus::prelude::*;
 
+use components::Navbar;
+use views::{Blog, Home};
+
+mod components;
+mod views;
+
+#[derive(Debug, Clone, Routable, PartialEq)]
+#[rustfmt::skip]
+enum Route {
+    #[layout(Navbar)]
+    #[route("/")]
+    Home {},
+    #[route("/blog/:id")]
+    Blog { id: i32 },
+}
+
+const TAILWIND_CSS: Asset = asset!("/assets/tailwind.css");
+
 fn main() {
     launch(App);
 }
@@ -7,6 +25,7 @@ fn main() {
 #[component]
 fn App() -> Element {
     rsx! {
+        document::Link { rel: "stylesheet", href: TAILWIND_CSS },
         div {
             class: "flex items-center justify-center min-h-screen w-full bg-gradient-to-br from-blue-900 to-gray-900",
             div {
